@@ -56,7 +56,7 @@ def main():
 				r = isInList(line.strip(), 32, pairs)
 				if r == "":
 					i += 1
-					queryresult = urllib2.urlopen("https://ipinfo.io/" + line.strip() + "?token=0d2c34b31fd7ab").read()
+					queryresult = urllib2.urlopen("https://ipinfo.io/" + line.strip() + "?token=TOKEN").read()
 					response = json.loads(queryresult)
 					if "org" in response and response["org"] != "":
 						print(response)
